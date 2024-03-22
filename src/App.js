@@ -1,7 +1,6 @@
 import './App.css';
 
-import Nav from './components/Nav';
-import Hero from './components/Hero';
+import Header from './components/Header/Header';
 import Projects from './components/ProjectsSection/Projects';
 import Contact from './components/ContactSection/Contact';
 import About from './components/About';
@@ -9,8 +8,7 @@ import About from './components/About';
 function App() {
   return (
     <div className="App">
-      <Nav />
-      <Hero />
+      <Header />
       <Projects />
       <Contact />
       <About />
