@@ -9,13 +9,13 @@ const ProjectListItem = (props) => {
   })
   return(
     <li className="project-pane" key={props.id}>
-      <div className="project-pane_left">
-        <img src={props.thumbnail} alt="thumbnail" />
+      <div className="project-pane_thumb">
+        <img className="project-thumb" src={props.thumbnail} alt="thumbnail" />
       </div>
-      <div className="project-pane_right">
-        <h3>{props.title}</h3>
-        <span>{parseSkills}</span>
-        <p>{props.description}</p>
+      <div className="project-pane_details">
+        <h3 className="project-title">{props.title}</h3>
+        <span className="project-skills">{parseSkills}</span>
+        <p className="project-description">{props.description}</p>
       </div>
     </li>
   );
