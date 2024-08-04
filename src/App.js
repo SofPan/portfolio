@@ -3,7 +3,7 @@ import './styles.css';
 import Header from './components/Header/Header';
 import Projects from './components/Projects/Projects';
 import Contact from './components/ContactSection/Contact';
-import About from './components/About';
+// import About from './components/About';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <main>
         <Projects />
         <Contact />
-        <About />
+        {/* <About /> */}
       </main>
     </div>
   );
