@@ -1,0 +1,30 @@
+// @use './variables.scss';
+
+header{
+  max-width: 100vw;
+  width: 100%;
+  height: 90vh;
+  
+  .hero{
+    height: 100%;
+    padding: 24px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ccc;
+
+    h1{
+      font-size: 3rem;
+      margin-bottom: 36px;
+    }
+
+    button{
+      border: 2px solid darkgreen;
+      border-radius: 3px;
+      padding: 5px 10px;
+      margin: 3px;
+      width: max-content;
+      font-size: 1.2rem;
+    }
+  }
+}
