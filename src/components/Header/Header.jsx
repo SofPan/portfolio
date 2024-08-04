@@ -5,7 +5,7 @@ import Hero from "./Hero";
 const Header = () => {
   return(
     <header>
-      <Nav />
+      {/* <Nav /> */}
       <Hero />
     </header>
   );
