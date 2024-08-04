@@ -1,0 +1,22 @@
+body{
+  font-size: 62.5%;
+}
+
+header, main, section, article, nav, div, ol, ul, h1, h2, h3, h4, p, a, li{
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol{
+  list-style: none;
+}
+
+a{
+  color: unset;
+  text-decoration: none;
+}
+
+button{
+  border: none;
+  background: none;
+}
