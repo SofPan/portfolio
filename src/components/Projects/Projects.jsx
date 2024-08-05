@@ -1,11 +1,10 @@
 import React from "react";
 import ProjectList from "./ProjectList";
 
-const Projects = () => {
+const Projects = props => {
   return(
     <section className="projects flex flex-column" id="projects">
-      {/* <h3>Featured</h3> */}
-        <ProjectList />
+        <ProjectList listItems={props.listItems}/>
     </section>
   );
 }

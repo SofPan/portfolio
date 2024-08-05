@@ -3,6 +3,30 @@ import { NavLink } from "react-router-dom";
 import Projects from "../Projects/Projects";
 import Socials from "../ContactSection/Socials";
 
+const DUMMY_PROJECTS = [
+  {
+    id: 1,
+    title: "Title 1",
+    description: "Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.",
+    skills: ["react", "ruby", "javascript"],
+    thumbnail: "https://picsum.photos/200"
+  },
+  {
+    id: 2,
+    title: "Title 2",
+    description: "Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.",
+    skills: ["react", "ruby", "javascript"],
+    thumbnail: "https://picsum.photos/300"
+  },
+  {
+    id: 3,
+    title: "Title 3",
+    description: "Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.",
+    skills: ["react", "ruby", "javascript"],
+    thumbnail: "https://picsum.photos/400"
+  }
+]
+
 const Hero = () => {
   return(
     <div className="hero bg-alt">
@@ -29,7 +53,7 @@ const Hero = () => {
       </header>
       <footer className="hero-footer">
         <Socials />
-        <Projects />
+        <Projects listItems={DUMMY_PROJECTS} />
       </footer>
     </div>
   );
