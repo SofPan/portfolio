@@ -8,10 +8,10 @@ const Socials = () => {
     <aside className="socials flex flex-column">
       <h3>Follow Me: </h3>
       <ul className="flex socials-list">
-        <li><a href="#LinkedIn"><LinkedInIcon /></a></li>
-        <li><a href="#GitHub"><GitHubIcon /></a></li>
-        <li><a href="#Instagram"><InstagramIcon /></a></li>
-        <li><a href="#TikTok">X</a></li>
+        <li><a className="socials-icon" href="#LinkedIn"><LinkedInIcon /></a></li>
+        <li><a className="socials-icon" href="#GitHub"><GitHubIcon /></a></li>
+        <li><a className="socials-icon" href="#Instagram"><InstagramIcon /></a></li>
+        {/* <li><a href="#TikTok">X</a></li> */}
       </ul>
     </aside>
   );
