@@ -43,5 +43,19 @@
         background-repeat: repeat-x;
       }
     }
+
+    &-text-block{
+      margin-left: 50px;
+      padding-left: 50px;
+      padding-top: 24px;
+      width: 45%;
+      display: flex;
+      justify-content: center;
+
+      p{
+        font-size: 1.8rem;
+        font-weight: 600; 
+      }
+    }
   }
 }

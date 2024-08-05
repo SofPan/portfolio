@@ -157,6 +157,18 @@ h4 {
   background-size: 43px;
   background-repeat: repeat-x;
 }
+.header .hero-text-block {
+  margin-left: 50px;
+  padding-left: 50px;
+  padding-top: 24px;
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+.header .hero-text-block p {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
 
 .projects {
   width: 75%;
