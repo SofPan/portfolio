@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import Projects from "../Projects/Projects";
 import Socials from "../ContactSection/Socials";
 
@@ -16,8 +17,8 @@ const Hero = () => {
             </h1>
           </div>
           <div>
-            <button className="btn btn-primary">My Work</button>
-            <button className="btn btn-primary">Contact Me</button>
+            <NavLink to="/work" className="btn btn-primary">My Work</NavLink>
+            <NavLink to="/contact" className="btn btn-primary">Contact Me</NavLink>
           </div>
         </aside>
         <article className="hero-text-block">

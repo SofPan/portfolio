@@ -1,19 +1,20 @@
+import { Routes, Route } from 'react-router-dom';
 import './styles.css';
 
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+import Work from './pages/Work';
+
 import Header from './components/Header/Header';
-import Projects from './components/Projects/Projects';
-import Contact from './components/ContactSection/Contact';
-// import About from './components/About';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      {/* <Projects /> */}
-      <main>
-        {/* <Contact /> */}
-        {/* <About /> */}
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/work" element={<Work />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </div>
   );
 }
