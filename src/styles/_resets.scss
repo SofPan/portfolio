@@ -1,5 +1,8 @@
+@use './variables.scss' as *;
+
 body{
   font-size: 62.5%;
+  font-family: $body;
 }
 
 header, main, section, article, nav, div, ol, ul, h1, h2, h3, h4, p, a, li{
