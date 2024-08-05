@@ -13,7 +13,7 @@ const ProjectListItem = (props) => {
         <img className="project-thumb" src={props.thumbnail} alt="thumbnail" />
       </div>
       <div className="project-pane_details">
-        <h3 className="project-title">{props.title}</h3>
+        <h4 className="project-title">{props.title}</h4>
         <span className="project-skills">{parseSkills}</span>
         <p className="project-description">{props.description}</p>
       </div>
