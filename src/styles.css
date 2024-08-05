@@ -46,11 +46,65 @@ h4 {
   margin-bottom: 2px;
 }
 
+.btn {
+  display: inline-flex;
+  margin: 0 10px;
+}
+.btn-primary {
+  padding: 10px 25px;
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #f6e4f6;
+  background: #e365c1;
+  box-shadow: 6px 5px 0 #000;
+  transform: skewX(-15deg);
+}
+.btn-primary:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 #f6e4f6;
+}
+
 .flex {
   display: flex;
 }
 .flex-column {
   flex-direction: column;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.color-main {
+  color: #f6e4f6;
+}
+.color-alt {
+  color: #def7de;
+}
+.color-light {
+  color: #fff;
+}
+.color-dark {
+  color: #e365c1;
+}
+
+.bg-main {
+  background-color: #f6e4f6;
+}
+.bg-alt {
+  background-color: #def7de;
+}
+.bg-light {
+  background-color: #fff;
+}
+.bg-dark {
+  background-color: #e365c1;
+}
+
+.small {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
 }
 
 .header {
@@ -63,29 +117,22 @@ h4 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #bbb;
 }
 .header .hero h1 {
   font-size: 3rem;
   margin-bottom: 36px;
 }
-.header .hero button {
-  border: 2px solid darkgreen;
-  border-radius: 3px;
-  padding: 5px 10px;
-  margin: 3px;
-  width: max-content;
-  font-size: 1.2rem;
-}
 .header .hero-header {
   display: flex;
   height: 66%;
+  padding-top: 64px;
+  padding-left: 64px;
 }
 .header .hero-footer {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  background-color: #F2F79E;
+  background-color: #f6e4f6;
   height: 30%;
   padding: 24px;
   position: relative;
@@ -96,7 +143,7 @@ h4 {
   top: -20px;
   width: 100%;
   height: 30px;
-  background-image: radial-gradient(32.02px at 50% 45px, #f2f79e 99%, transparent 101%);
+  background-image: radial-gradient(32.02px at 50% 45px, #f6e4f6 99%, transparent 101%);
   background-size: 43px;
   background-repeat: repeat-x;
 }

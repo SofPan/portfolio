@@ -4,17 +4,19 @@ import Socials from "../ContactSection/Socials";
 
 const Hero = () => {
   return(
-    <div className="hero">
+    <div className="hero bg-alt">
       <header className="hero-header flex flex-column">
         <div>
           <h1>
-            I'm <span className="color-alt">Sofia</span><br />
-            A <span className="color-alt">Freelance Web Developer</span>
+            I'm <span className="color-dark">Sofia</span><br />
+            <span class="small">
+              A <span className="color-dark">Freelance Web Developer</span>
+            </span>
           </h1>
         </div>
         <div>
-          <button>My Work</button>
-          <button>Contact Me</button>
+          <button className="btn btn-primary">My Work</button>
+          <button className="btn btn-primary">Contact Me</button>
         </div>
       </header>
       <footer className="hero-footer">
