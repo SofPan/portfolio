@@ -1,16 +1,17 @@
 .projects{
-  width: 75%;
-  margin-left: 50px;
+  // width: 75%;
+  // margin-left: 50px;
   align-items: flex-end;
   .project{
     &-list{
-      max-width: 85%;
-      display: flex;
+      // max-width: 85%;
+      // display: flex;
+      width: 100%;
     }
 
     &-pane{
       margin: 0 24px;
-      width: calc((100% / 3) - 24px);
+      // width: calc((100% / 3) - 24px);
       height: 100%;
 
       &-details{

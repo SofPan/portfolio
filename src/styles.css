@@ -186,17 +186,13 @@ h4 {
 }
 
 .projects {
-  width: 75%;
-  margin-left: 50px;
   align-items: flex-end;
 }
 .projects .project-list {
-  max-width: 85%;
-  display: flex;
+  width: 100%;
 }
 .projects .project-pane {
   margin: 0 24px;
-  width: calc(33.3333333333% - 24px);
   height: 100%;
 }
 .projects .project-pane-details {

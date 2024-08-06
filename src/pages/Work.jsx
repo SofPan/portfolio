@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 import Projects from "../components/Projects/Projects";
 import Socials from "../components/ContactSection/Socials";
+import { useContext } from "react";
+import { ProjectContext } from "../App";
 
 const DUMMY_PROJECTS = [
   {
@@ -27,6 +29,8 @@ const DUMMY_PROJECTS = [
 ]
 
 const Work = () => {
+  const {ghProjects} = useContext(ProjectContext);
+  
   return(
     <div className="bg-alt">
       <header>
@@ -35,7 +39,7 @@ const Work = () => {
       <main>
         <section>
           <h2>Github</h2>
-          <Projects listItems={DUMMY_PROJECTS} />
+          <Projects listItems={ghProjects} />
         </section>
         <section>
           <h2>Websites</h2>
