@@ -3,13 +3,15 @@ import ProjectListItem from "./ProjectListItem";
 
 const ProjectList = props => {
   const mapListItems = props.listItems.map(project => {
+    console.log(project);
     return <ProjectListItem 
       key={project.id} 
       id={project.id}
-      title={project.title}
+      title={project.name}
       description={project.description}
-      skills={project.skills}
-      thumbnail={project.thumbnail}
+      language={project.language}
+      thumbnail={project.url}
+      url={project.html_url}
     />
   })
   return(

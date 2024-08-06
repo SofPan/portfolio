@@ -1,22 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ProjectContext } from "../../App";
 
 const ProjectListItem = (props) => {
-  const parseSkills = props.skills.map(skill => {
-    if (props.skills.indexOf(skill) === props.skills.length - 1){
-      return skill;
-    }
-    return skill + " / ";
-  })
+  const {loading} = useContext(ProjectContext);
   return(
     <li className="project-pane" key={props.id}>
-      <div className="project-pane_thumb">
+      {/* <div className="project-pane_thumb">
         <img className="project-thumb" src={props.thumbnail} alt="thumbnail" />
-      </div>
-      <div className="project-pane_details">
-        <h4 className="project-title">{props.title}</h4>
-        <span className="project-skills">{parseSkills}</span>
-        <p className="project-description">{props.description}</p>
-      </div>
+      </div> */}
+      {!loading && 
+          <div className="project-pane_details">
+            <h4 className="project-title">{props.title}</h4>
+            <span className="project-skills">{props.language}</span>
+            <a href={props.url} target="_blank" rel="noreferrer">
+              <p className="project-description">{props.description}</p>
+            </a>
+          </div>
+      }
     </li>
   );
 }

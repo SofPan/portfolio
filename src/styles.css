@@ -195,9 +195,20 @@ h4 {
   display: flex;
 }
 .projects .project-pane {
-  display: flex;
-  flex-direction: column-reverse;
   margin: 0 24px;
+  width: calc(33.3333333333% - 24px);
+  height: 100%;
+}
+.projects .project-pane-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+.projects .project-title {
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  height: 20%;
 }
 .projects .project-thumb {
   border-radius: 30px;
@@ -211,9 +222,14 @@ h4 {
   letter-spacing: 2px;
   line-height: 12px;
   font-weight: 600;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 .projects .project-description {
-  display: none;
+  font-size: 1.2rem;
+  height: 50%;
+  margin-top: 10px;
+  width: 85%;
 }
 
 .socials-list {

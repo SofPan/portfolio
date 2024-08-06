@@ -9,9 +9,22 @@
     }
 
     &-pane{
-      display: flex;
-      flex-direction: column-reverse;
       margin: 0 24px;
+      width: calc((100% / 3) - 24px);
+      height: 100%;
+
+      &-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+      }
+    }
+
+    &-title{
+      margin-bottom: 2px;
+      text-transform: uppercase;
+      height: 20%;
     }
 
     &-thumb{
@@ -27,11 +40,15 @@
       letter-spacing: 2px;
       line-height: 12px;
       font-weight: 600;
+      margin-top: 4px;
+      margin-bottom: 4px;
     }
 
     &-description{
-      display: none;
+      font-size: 1.2rem;
+      height: 50%;
+      margin-top: 10px;
+      width: 85%;
     }
-
   }
 }

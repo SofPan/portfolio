@@ -1,33 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import Projects from "../Projects/Projects";
 import Socials from "../ContactSection/Socials";
-
-const DUMMY_PROJECTS = [
-  {
-    id: 1,
-    title: "Title 1",
-    description: "Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.",
-    skills: ["react", "ruby", "javascript"],
-    thumbnail: "https://picsum.photos/200"
-  },
-  {
-    id: 2,
-    title: "Title 2",
-    description: "Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.",
-    skills: ["react", "ruby", "javascript"],
-    thumbnail: "https://picsum.photos/300"
-  },
-  {
-    id: 3,
-    title: "Title 3",
-    description: "Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.",
-    skills: ["react", "ruby", "javascript"],
-    thumbnail: "https://picsum.photos/400"
-  }
-]
+import { ProjectContext } from "../../App";
 
 const Hero = () => {
+  const {ghProjects} = useContext(ProjectContext);
+
+  const filteredProjects = ghProjects.filter(project => project.stargazers_count > 0);
+
   return(
     <div className="hero bg-alt">
       <header className="hero-header">
@@ -51,9 +32,9 @@ const Hero = () => {
           </p>
         </article>
       </header>
-      <footer className="hero-footer">
+      <footer className="hero-footer scalloped">
         <Socials />
-        <Projects listItems={DUMMY_PROJECTS} />
+        <Projects listItems={filteredProjects} />
       </footer>
     </div>
   );
