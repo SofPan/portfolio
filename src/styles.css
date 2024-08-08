@@ -188,12 +188,23 @@ h4 {
 .projects {
   align-items: flex-end;
 }
+.hero-footer .projects {
+  width: 75%;
+  margin-left: 50px;
+}
 .projects .project-list {
   width: 100%;
+}
+.hero-footer .projects .project-list {
+  max-width: 85%;
+  display: flex;
 }
 .projects .project-pane {
   margin: 0 24px;
   height: 100%;
+}
+.hero-footer .projects .project-pane {
+  width: calc(33.3333333333% - 24px);
 }
 .projects .project-pane-details {
   display: flex;

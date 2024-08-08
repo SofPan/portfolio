@@ -10,8 +10,8 @@ const ProjectList = props => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 5,
+    slidesToShow: 3,
+    slidesToScroll: 3,
   };
 
   const mapListItems = props.listItems.map(project => {
@@ -21,15 +21,21 @@ const ProjectList = props => {
       title={project.name}
       description={project.description}
       language={project.language}
-      thumbnail={project.url}
-      url={project.html_url}
+      thumbnail={project.thumbnail}
+      url={project.url}
     />
   })
   return(
     <ul className="project-list">
-      <Slider {...settings}>
-        {mapListItems}
-      </Slider>
+      {props.listItems.length > 3 ?
+        <Slider {...settings}>
+          {mapListItems}
+        </Slider>
+        :
+        <div>
+          {mapListItems}
+        </div>
+      }
     </ul>
   );
 }
