@@ -24,7 +24,7 @@ const ProjectListItem = (props) => {
           <div className="project-pane_details">
             <h4 className="project-title">{props.title}</h4>
             <span className="project-skills">{language}</span>
-            <a href={props.url} target="_blank" rel="noreferrer">
+            <a href={props.url} target="_blank" rel="noreferrer" className="project-link">
             {props.thumbnail ? 
               <img className="project-thumb" src={props.thumbnail} alt="thumbnail" />
               :

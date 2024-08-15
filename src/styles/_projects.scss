@@ -18,54 +18,9 @@
     &-pane{
       margin: 0 24px;
       height: 100%;
+      text-align: center;
       .hero-footer &{
         width: calc((100% / 3) - 24px);
-        .project-thumb{
-          position: relative;
-          transition: color 0.25s;
-
-          &::before,
-          &::after{
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-          }
-
-          &::before {
-            top: 0;
-            left: 0;
-          }
-
-          &::after {
-            bottom: 0;
-            right: 0;
-          }
-
-        }
-        a:hover .project-thumb{
-
-          &::before,
-          &::after{
-            width: 100%;
-            height: 100%;
-          }
-          &::before {
-            border-top-color: turquoise; // Make borders visible
-            border-right-color: turquoise;
-            transition:
-              width 0.25s ease-out, // Width expands first
-              height 0.25s ease-out 0.25s; // And then height
-          }
-          &::after {
-            border-bottom-color: turquoise; // Make borders visible
-            border-left-color: turquoise;
-            transition:
-              border-color 0s ease-out 0.5s, // Wait for ::before to finish before showing border
-              width 0.25s ease-out 0.5s, // And then exanding width
-              height 0.25s ease-out 0.75s; // And finally height
-          }
-        }
       }
       &-details{
         display: flex;
@@ -81,12 +36,21 @@
       height: 20%;
     }
 
+    &-link{
+      display: flex;
+      justify-content: center;
+      &:hover .project-thumb{
+        box-shadow: 10px -10px 0 0 turquoise;
+      }
+    }
+
     &-thumb{
       border-radius: 30px;
       width: 125px;
       height: 125px;
       object-fit: cover;
-      margin-top: 12px;
+      margin-top: 24px;
+      transition: 300ms ease-out;
     }
 
     &-skills{
@@ -104,6 +68,12 @@
       height: 50%;
       margin-top: 10px;
       width: 85%;
+    }
+  }
+
+  .page_Work &{
+    .project-list{
+      padding-top: 50px;
     }
   }
 }
