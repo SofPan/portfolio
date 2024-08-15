@@ -1,0 +1,9 @@
+@use './variables.scss' as *;
+
+.App .slick{
+  &-prev:before, 
+  &-next:before{
+    color: $dark;
+    font-size: 35px;
+  }
+}

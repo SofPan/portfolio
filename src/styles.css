@@ -192,6 +192,11 @@ h4 {
   font-weight: 600;
 }
 
+.App .slick-prev:before, .App .slick-next:before {
+  color: #e365c1;
+  font-size: 35px;
+}
+
 .projects {
   align-items: flex-end;
 }
