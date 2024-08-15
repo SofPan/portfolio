@@ -3,33 +3,6 @@ import { NavLink } from "react-router-dom";
 import Projects from "../Projects/Projects";
 import Socials from "../ContactSection/Socials";
 
-const FEATURED = [
-  {
-    id: 0,
-    name: "MedConnect",
-    description: "Connecting available doctors with patients, built using PERN stack",
-    language: ["React", "PostgreSQL", "Express", "Node"],
-    thumbnail: "/assets/project-thumbs/med-bg.jpg",
-    url: "https://github.com/SofPan/MedConnect"
-  },
-  {
-    id: 1,
-    name: "Jungle",
-    description: "A mini e-commerce app built using Rails 6.1",
-    language: ["Ruby", "Rails", "PostgreSQL"],
-    thumbnail: "/assets/project-thumbs/jungle_thumb.png",
-    url: "https://github.com/SofPan/jungle"
-  },
-  {
-    id: 2,
-    name: "Photolabs",
-    description: "Picture favorites wall built using React",
-    language: ["React", "PostgreSQL", "Express", "Node"],
-    thumbnail: "/assets/project-thumbs/photolabs_thumb.png",
-    url: "https://github.com/SofPan/photolabs"
-  },
-]
-
 const Hero = () => {
 
   return(
@@ -57,7 +30,7 @@ const Hero = () => {
       </header>
       <footer className="hero-footer scalloped">
         <Socials />
-        <Projects listItems={FEATURED} />
+        <Projects featured={true}/>
       </footer>
     </div>
   );

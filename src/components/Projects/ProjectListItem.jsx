@@ -1,8 +1,6 @@
-import React, { useContext } from "react";
-import { ProjectContext } from "../../App";
+import React from "react";
 
 const ProjectListItem = (props) => {
-  // const {loading} = useContext(ProjectContext);
   let language = props.language
   if (Array.isArray(language)){
     language = props.language.map(lang => {
@@ -12,8 +10,14 @@ const ProjectListItem = (props) => {
       return lang + " / ";
     })
   }
+
+  const determineClasses = () => {
+    let classes = 'project-pane';
+    if (props.isFeatured) classes+= ' featured';
+    return classes;
+  }
   return(
-    <li className="project-pane" key={props.id}>
+    <li className={determineClasses()} key={props.id}>
       <div className="project-pane_thumb">
       </div>
       {/* {!loading &&  */}
@@ -22,10 +26,10 @@ const ProjectListItem = (props) => {
             <span className="project-skills">{language}</span>
             <a href={props.url} target="_blank" rel="noreferrer">
             {props.thumbnail ? 
-            <img className="project-thumb" src={props.thumbnail} alt="thumbnail" />
-            :
-            <p className="project-description">{props.description}</p>
-          }
+              <img className="project-thumb" src={props.thumbnail} alt="thumbnail" />
+              :
+              <p className="project-description">{props.description}</p>
+            }
             </a>
           </div>
       {/* } */}

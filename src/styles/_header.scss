@@ -30,6 +30,10 @@
       background-color: $primary;
       height: 30%;
       padding: 24px;
+
+      .project-pane:not(.featured){
+        display: none;
+      }
     }
 
     &-text-block{

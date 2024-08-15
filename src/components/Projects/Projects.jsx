@@ -4,7 +4,7 @@ import ProjectList from "./ProjectList";
 const Projects = props => {
   return(
     <section className="projects flex flex-column" id="projects">
-      <ProjectList listItems={props.listItems}/>
+      <ProjectList featured={props.featured}/>
     </section>
   );
 }

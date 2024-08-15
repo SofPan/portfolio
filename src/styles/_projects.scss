@@ -8,8 +8,10 @@
     &-list{
       width: 100%;
       .hero-footer &{
-        max-width: 85%;
-        display: flex;
+        & > div{
+          max-width: 85%;
+          display: flex;
+        }
       }
     }
 
@@ -18,6 +20,52 @@
       height: 100%;
       .hero-footer &{
         width: calc((100% / 3) - 24px);
+        .project-thumb{
+          position: relative;
+          transition: color 0.25s;
+
+          &::before,
+          &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+          }
+
+          &::before {
+            top: 0;
+            left: 0;
+          }
+
+          &::after {
+            bottom: 0;
+            right: 0;
+          }
+
+        }
+        a:hover .project-thumb{
+
+          &::before,
+          &::after{
+            width: 100%;
+            height: 100%;
+          }
+          &::before {
+            border-top-color: turquoise; // Make borders visible
+            border-right-color: turquoise;
+            transition:
+              width 0.25s ease-out, // Width expands first
+              height 0.25s ease-out 0.25s; // And then height
+          }
+          &::after {
+            border-bottom-color: turquoise; // Make borders visible
+            border-left-color: turquoise;
+            transition:
+              border-color 0s ease-out 0.5s, // Wait for ::before to finish before showing border
+              width 0.25s ease-out 0.5s, // And then exanding width
+              height 0.25s ease-out 0.75s; // And finally height
+          }
+        }
       }
       &-details{
         display: flex;
@@ -48,6 +96,7 @@
       font-weight: 600;
       margin-top: 4px;
       margin-bottom: 4px;
+      text-wrap: nowrap;
     }
 
     &-description{

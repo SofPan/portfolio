@@ -4,8 +4,12 @@ import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import useApi from "../../contexts/useAPI";
 
 const ProjectList = props => {
+
+  const {projects} = useApi();
+
   const settings = {
     dots: false,
     infinite: true,
@@ -14,7 +18,7 @@ const ProjectList = props => {
     slidesToScroll: 3,
   };
 
-  const mapListItems = props.listItems.map(project => {
+  const mapListItems = projects.map(project => {
     return <ProjectListItem 
       key={project.id} 
       id={project.id}
@@ -23,11 +27,13 @@ const ProjectList = props => {
       language={project.language}
       thumbnail={project.thumbnail}
       url={project.url}
+      isFeatured={project.isFeatured}
     />
   })
   return(
     <ul className="project-list">
-      {props.listItems.length > 3 ?
+      {
+      !props.featured ? 
         <Slider {...settings}>
           {mapListItems}
         </Slider>
@@ -36,6 +42,7 @@ const ProjectList = props => {
           {mapListItems}
         </div>
       }
+      
     </ul>
   );
 }
