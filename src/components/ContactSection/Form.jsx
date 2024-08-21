@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
 import { InputLabel, Input, Button, TextareaAutosize } from "@mui/material";
 import { styled } from '@mui/system';
+import Email from '../../helpers/sendEmail';
+
 
 const StyledInput = styled(Input)({
   minWidth: 275,
@@ -47,24 +49,33 @@ const StyledButton = styled(Button)({
 });
 
 const Form = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    const email = new Email();
+    email.sendForm(form);
+  };
+
   return(
     <>
-      <form className="form-contact">
+      <form ref={form} onSubmit={sendEmail} className="form-contact">
         <div className="form-group">
-          <InputLabel htmlFor="contactName"></InputLabel>
-          <StyledInput type="text" id="contactName" placeholder="Name" disableUnderline={true}/>
+          <InputLabel htmlFor="user_name"></InputLabel>
+          <StyledInput name="user_name" type="text" id="user_name" placeholder="Name" disableUnderline={true}/>
         </div>
         <div className="form-group">
-          <InputLabel htmlFor="contactEmail"></InputLabel>
-          <StyledInput id="contactEmail" type="email" placeholder="Email@email.com" disableUnderline={true}/>
+          <InputLabel htmlFor="user_email"></InputLabel>
+          <StyledInput name="user_email" id="user_email" type="email" placeholder="Email@email.com" disableUnderline={true}/>
           </div>
         <div className="form-group">
-          <InputLabel htmlFor="contactMessage"></InputLabel>
+          <InputLabel htmlFor="message"></InputLabel>
           <StyledTextareaAutosize 
             minRows={6}
             size="lg"
             variant="plain" 
-            id="contactMessage"
+            id="message"
+            name="message"
             placeholder="I look forward to hearing from you!"
           />
         </div>
