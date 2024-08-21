@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
 import Socials from "../components/ContactSection/Socials";
+import Form from "../components/ContactSection/Form";
 
-const Contact = () => {
+const ContactPage = () => {
   return(
     <>
       <div className="page_Work bg-alt full-height">
@@ -11,17 +12,18 @@ const Contact = () => {
         <main>
           <section>
             <h2>Contact Me</h2>
+            <Form />
           </section>
         </main>
       </div>
       <footer className="bg-main scalloped ">
         <div className="footer-inner flex justify-between">
           <Socials />
-          <NavLink to="/contact" className="btn btn-primary">My Work</NavLink>
+          <NavLink to="/work" className="btn btn-primary">My Work</NavLink>
         </div>
       </footer>
     </>
   )
 }
 
-export default Contact;
+export default ContactPage;
