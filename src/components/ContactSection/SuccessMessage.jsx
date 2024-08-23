@@ -4,7 +4,7 @@ const SuccessMessage = props => {
     success
   } = props;
   return(
-    <div className={textColor}>
+    <div className={`form-message ${textColor}`}>
       {success ?
         <span>Thank you for your message. I will be in touch soon.</span>
         :

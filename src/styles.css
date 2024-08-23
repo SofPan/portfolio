@@ -109,6 +109,12 @@ h4 {
 .color-dark {
   color: #e365c1;
 }
+.color-success {
+  color: green;
+}
+.color-error {
+  color: red;
+}
 
 .bg-main {
   background-color: #f6e4f6;
@@ -280,6 +286,11 @@ h4 {
 
 .form-group {
   margin: 36px 0;
+}
+.form-message {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=styles.css.map */

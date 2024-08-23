@@ -51,7 +51,7 @@ const StyledButton = styled(Button)({
 
 const Form = () => {
   const form = useRef();
-  const [emailResponse, setEmailResponse] = useState("");
+  const [emailResponse, setEmailResponse] = useState("SUCCESS");
   const [successMessage, setSuccessMessage] = useState('');
 
   useEffect(() => {

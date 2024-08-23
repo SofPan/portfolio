@@ -94,6 +94,13 @@ h4{
   &-dark{
     color: $dark;
   }
+
+  &-success{
+    color: green;
+  }
+  &-error{
+    color: red;
+  }
 }
 
 .bg{
