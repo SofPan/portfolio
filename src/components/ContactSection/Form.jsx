@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { InputLabel, Input, Button, TextareaAutosize } from "@mui/material";
 import { styled } from '@mui/system';
 import Email from '../../helpers/sendEmail';
+import SuccessMessage from "./SuccessMessage";
 
 
 const StyledInput = styled(Input)({
@@ -51,13 +52,14 @@ const StyledButton = styled(Button)({
 const Form = () => {
   const form = useRef();
   const [emailResponse, setEmailResponse] = useState("");
+  const [successMessage, setSuccessMessage] = useState('');
 
   useEffect(() => {
     if (emailResponse === "SUCCESS"){
-      // render message component with success props
+      setSuccessMessage(<SuccessMessage textColor="color-success" success={true} />)
     }
     if (emailResponse === "FAILED"){
-      // render message component with failure props
+      setSuccessMessage(<SuccessMessage textColor="color-error" success={false} />)
     }
   }, [emailResponse])
 
@@ -72,6 +74,7 @@ const Form = () => {
 
   return(
     <>
+      {successMessage}
       <form ref={form} onSubmit={sendEmail} className="form-contact">
         <div className="form-group">
           <InputLabel htmlFor="user_name"></InputLabel>
