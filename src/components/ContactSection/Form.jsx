@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { InputLabel, Input, Button, TextareaAutosize } from "@mui/material";
 import { styled } from '@mui/system';
 import Email from '../../helpers/sendEmail';
@@ -50,12 +50,25 @@ const StyledButton = styled(Button)({
 
 const Form = () => {
   const form = useRef();
+  const [emailResponse, setEmailResponse] = useState("");
 
-  const sendEmail = (e) => {
+  useEffect(() => {
+    if (emailResponse === "SUCCESS"){
+      // render message component with success props
+    }
+    if (emailResponse === "FAILED"){
+      // render message component with failure props
+    }
+  }, [emailResponse])
+
+  const sendEmail = async (e) => {
     e.preventDefault();
     const email = new Email();
-    email.sendForm(form);
+    let response = await email.sendForm(form);
+    form.current.reset();
+    setEmailResponse(response);
   };
+
 
   return(
     <>
@@ -81,6 +94,7 @@ const Form = () => {
         </div>
         <div className="form-group">
           <StyledButton type="submit">Send</StyledButton>
+          <div className="g-recaptcha" data-sitekey={process.env.REACT_APP_SITE_KEY}></div>
         </div>
       </form>
     </>
